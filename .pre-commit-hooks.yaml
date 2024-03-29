@@ -1,7 +1,7 @@
 - id: cargo-fmt
   name: Cargo fmt
   description: Format files with cargo fmt.
-  types: [ rust ]
+  types: [rust, toml]
   entry: hooks/cargo_fmt.sh
   language: script
   require_serial: true
@@ -10,22 +10,22 @@
   description: Check the package for errors.
   entry: hooks/cargo_in_dir.sh
   language: script
-  args: [ "check" ]
-  files: \.rs$
+  args: ["check"]
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
 - id: cargo-clippy
   name: cargo clippy
   description: Lint rust sources
   entry: hooks/cargo_in_dir.sh
   language: script
-  args: [ "clippy" ]
-  files: \.rs$
+  args: ["clippy"]
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
 - id: cargo-machete
   name: cargo machete
   description: Check unused dependencies
   entry: hooks/cargo_in_dir.sh
   language: script
-  args: [ "machete" ]
-  files: \.rs$
+  args: ["machete"]
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
