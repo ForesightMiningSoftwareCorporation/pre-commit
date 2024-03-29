@@ -29,3 +29,11 @@
   args: ["machete"]
   files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
+- id: cargo-lock
+  name: cargo update -w --locked
+  description: Check if the lock file is up to date
+  entry: hooks/cargo_in_dir.sh
+  language: script
+  args: ["update"]
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
+  require_serial: true

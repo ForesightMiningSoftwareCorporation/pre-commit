@@ -7,6 +7,7 @@ supported hooks are:
 * **cargo-check**: Check if code is valid using `cargo check` on staged Rust code (`*.rs` files).
 * **cargo-clippy**: Check if code is valid using `cargo clippy` on staged Rust code (`*.rs` files).
 * **cargo-machete**: Check for unused dependencies using `cargo machete` on staged Rust code (`*.rs` files).
+* **cargo-lock**: Check if the `Cargo.lock` file is up to date using `cargo update -w --locked` on staged Rust code (`*.rs*` files).
 
 ## General Usage
 

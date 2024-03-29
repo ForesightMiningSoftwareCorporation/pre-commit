@@ -19,6 +19,9 @@ validate_command() {
         machete)
             additional_args=("--")
             ;;
+        update)
+            additional_args=("-w" "--locked")
+            ;;
         *)
             echo "Error: Unsupported command '$1'"
             exit 1
