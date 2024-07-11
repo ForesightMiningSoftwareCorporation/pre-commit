@@ -1,9 +1,9 @@
 - id: cargo-fmt
   name: Cargo fmt
   description: Format files with cargo fmt.
-  types: [rust, toml]
   entry: hooks/cargo_fmt.sh
   language: script
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
 - id: cargo-check
   name: cargo check
