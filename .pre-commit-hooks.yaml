@@ -28,7 +28,7 @@
   language: script
   args: ["doc --no-deps"]
   files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
-  require_serial: true
+  require_serial: false
 - id: cargo-machete
   name: cargo machete
   description: Check unused dependencies
