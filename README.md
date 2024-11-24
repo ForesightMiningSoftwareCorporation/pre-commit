@@ -21,6 +21,7 @@ repos:
       - id: cargo-fmt
       - id: cargo-check
       - id: cargo-clippy
+      - id: cargo-doc
       - id: cargo-machete
 ```
 

@@ -21,6 +21,14 @@
   args: ["clippy"]
   files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
   require_serial: true
+- id: cargo-doc
+  name: cargo doc
+  description: Build docs
+  entry: hooks/cargo_in_dir.sh
+  language: script
+  args: ["doc --all-features --no-deps"]
+  files: (\.rs$|Cargo\.lock$|Cargo\.toml$)
+  require_serial: false
 - id: cargo-machete
   name: cargo machete
   description: Check unused dependencies
